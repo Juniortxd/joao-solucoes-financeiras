@@ -24,7 +24,14 @@ function items(json) {
   if (Array.isArray(json?.data)) return json.data;
   if (Array.isArray(json?.data?.data)) return json.data.data;
   if (Array.isArray(json?.data?.items)) return json.data.items;
-  return [];
+
+  console.error("Resposta inesperada da Binance:",
+    JSON.stringify(json).slice(0, 2000));
+
+  throw new Error(
+    "A Binance respondeu, mas os anúncios vieram em um formato inesperado"
+  );
+}
 }
 function n(...xs) {
   for (const x of xs) { const v = Number(x); if (Number.isFinite(v) && v > 0) return v; }
