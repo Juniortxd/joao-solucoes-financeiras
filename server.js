@@ -172,6 +172,7 @@ async function market(type, limit) {
   );
 
   const json = await requestJSON(url.toString());
+  console.log("RESPOSTA BINANCE:", JSON.stringify(json).slice(0, 2000));
   const ads = items(json);
 
   console.log(
@@ -309,3 +310,4 @@ server.listen(PORT, () => {
     `João Soluções Financeiras: servidor iniciado na porta ${PORT}`
   );
 });
+
