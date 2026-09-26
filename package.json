@@ -1,0 +1,7 @@
+{
+  "name":"joao-solucoes-financeiras",
+  "version":"1.0.0",
+  "private":true,
+  "description":"Painel de liquidez P2P USDT/BRL",
+  "scripts":{"start":"node server.js"}
+}
